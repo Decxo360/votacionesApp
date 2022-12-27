@@ -1,12 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState ={
-    id:'',
+    id:1,
     name:'',
     apellido:'',
     username:'',
     email:'',
-    token:''
+    token:'',
+    isLogged:true
 }
 
 export const AuthSlice = createSlice({
@@ -28,6 +29,7 @@ export const AuthSlice = createSlice({
         state.username=''
         state.email=''
         state.token=''
+        state.isLogged=false
     }
   },
 });
