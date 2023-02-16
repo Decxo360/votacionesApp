@@ -19,10 +19,23 @@ export const useAlternativa = ()=>{
         setAlternativas(nuevasAlternativas);
     };
 
+    const onHandleChange = (event,index) =>{
+        event.preventDefault();
+        const{value}=event.target
+        console.log(value);
+        setAlternativas(prevState =>{
+            const newState = [...prevState]
+            newState[index].value = value
+            return newState;
+        })
+    }
+
     return{
         alternativas,
         agregarAlternativa,
-        eliminarAlternativa
+        eliminarAlternativa,
+        onHandleChange,
+        setAlternativas
     }
 
 }
