@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState ={
     votaciones:[],
-    newVotacion: null,
+    newVotacion: JSON.stringify(localStorage.getItem("votacion")) && null,
     misVotaciones:null
 }
 
