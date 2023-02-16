@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { LoginPage,RegisterPage } from '../components/auth'
-import { ErrorPage, HomePage, ProfilePage, SearchPage } from '../components/pages'
+import { ErrorPage, HomePage, ProfilePage, SearchPage, VotePage } from '../components/pages'
 
 export const AppRoute = () => {
   return (
@@ -12,6 +12,7 @@ export const AppRoute = () => {
         <Route path={'/Home'} element={<HomePage/>}/>
         <Route path={'/Search'} element={<SearchPage/>}/>
         <Route path={'/Perfil/:id'} element={<ProfilePage/>}/>
+        <Route path={'/Votacion'} element={<VotePage/>}/>
         <Route path='/*' element={<ErrorPage/>}/>
       </Routes>
     </BrowserRouter>
