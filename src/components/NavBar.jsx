@@ -26,8 +26,8 @@ export const NavBar = () => {
           <NavLink className={({isActive})=>  isActive ? 'text-amber-500 scale-110' : 'text-black hover:text-amber-500 hover:scale-110 transition ease-in-out delay-150' }  to={isLogged ? `/Perfil/${id}` : '/login'} >Mi Perfil</NavLink>
           {
             isLogged 
-            ? <Btn className={'bg-red-500 hover:bg-red-600 hover:scale-110 transition ease-in-out delay-150'} texto={'LogOut'} method={onLogOut}/>
-            : <Btn className={'bg-blue-700 hover:bg-blue-800 hover:scale-110 transition ease-in-out delay-150'}  texto={'LogIn'} method={onLogIn} />
+            ? <Btn className={'bg-red-500 hover:bg-red-600 hover:scale-110 transition ease-in-out delay-150 w-[120px] h-[40px] text-white'} texto={'LogOut'} method={onLogOut}/>
+            : <Btn className={'bg-blue-700 hover:bg-blue-800 hover:scale-110 transition ease-in-out delay-150 w-[120px] h-[40px] text-white'}  texto={'LogIn'} method={onLogIn} />
           }
       </div>
     </div>
