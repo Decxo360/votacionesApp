@@ -2,13 +2,15 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState ={
     votaciones:[],
+    newVotacion: null,
+    misVotaciones:null
 }
 
 export const VoteSlice = createSlice({
   name: 'Votaciones',
   initialState,
   reducers: {
-    addNewVotation:(state,{payload})=>{
+    addVotations:(state,{payload})=>{
         state.votaciones = payload
     },
     removeVotation:(state,{payload})=>{
@@ -21,8 +23,11 @@ export const VoteSlice = createSlice({
     },
     editVotacion:(state,{payload})=>{
       state.votaciones[payload.position] = payload.votacion
+    },
+    addNewVotation:(state,{payload})=>{
+      state.newVotacion = payload
     }
   },
 });
 
-export const {addNewVotation,removeVotation} = VoteSlice.actions;
+export const {addVotations,removeVotation,addNewVotation} = VoteSlice.actions;
