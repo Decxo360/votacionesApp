@@ -1,22 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import { useAlternativa } from '../../../hooks/useAlternativa'
 import { AlternativaComponent } from './alternativaComponent'
 import { IconBottom } from './IconBottom'
 import { Image } from './Image'
 
-export const FormComponent = (
-    {alternativas,numero,onDelete,indexPre,add,pregunta,removeAlternativa,onChangePregunta,onChangeAlternativa}
-    ) => {
-
-    // const { alternativas, agregarAlternativa, eliminarAlternativa, onHandleChange } = useAlternativa()
-    // const [texto,setTexto]=useState('')
-
-    // const handleChange = (event)=>{
-    //     event.preventDefault();
-    //     setTexto(event.target.value)
-    // }
-
-    // console.log(alternativas);
+export const FormComponent = ({
+    alternativas,
+    numero,
+    onDelete,
+    indexPre,
+    add,
+    pregunta,
+    removeAlternativa,
+    onChangePregunta,
+    onChangeAlternativa
+}) => {
     const onChangeValue =(event)=>{
         onChangePregunta(event,indexPre)
     }
@@ -28,10 +25,9 @@ export const FormComponent = (
     const handleClick =()=>{
         add(indexPre)
     }
-
       
   return (
-    <div className='w-[90%] border mt-5 rounded-xl pb-[20px]'>
+    <div className='w-[60%] border mt-5 rounded-xl pb-[20px]'>
         <div className='flex flex-row'>
         <form className='mt-5 ml-5 flex flex-row items-center gap-5 w-[50%]'>
             <h1>{numero})</h1>
