@@ -1,6 +1,5 @@
-
 import { useState } from 'react';
-import { useAlternativa } from '../../../hooks/useAlternativa';
+
 import { Image } from './Image'
 
 export const AlternativaComponent = ({value,numero,onDelete,indexAlternativa,indexPregunta,onChangeAlternativa}) => {
@@ -8,7 +7,6 @@ export const AlternativaComponent = ({value,numero,onDelete,indexAlternativa,ind
     const handleChange = (event) =>{
         onChangeAlternativa(event,indexPregunta,indexAlternativa)
     }
-
     
     const handleRemove =()=>{
         onDelete(indexPregunta,indexAlternativa)
